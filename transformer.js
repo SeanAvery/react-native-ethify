@@ -18,6 +18,17 @@ function transform(src, filename, options) {
   }
 }
 
+module.exports = function(data, callback) {
+  let result;
+  try {
+    result = transform(data.sourceCode, data.filename, data.options)
+  } catch (e) {
+    callback(e)
+    return
+  }
+  callback(null, result)
+}
+
 
 
 
