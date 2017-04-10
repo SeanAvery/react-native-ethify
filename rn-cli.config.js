@@ -8,7 +8,7 @@ module.exports = {
   // getBlacklistRE() {
   //   const additionalBlacklist
   // }
-  getTransformerModulePath() {
-    return require.resolve('./transformer')
+  getTransformModulePath() {
+    return require.resolve('./transformer');
   },
 }
