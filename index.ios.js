@@ -4,6 +4,9 @@
  * @flow
  */
 
+ // console.log('Buffer', global.Buffer)
+import './global.js'
+import { keystore, txutils, signing } from 'eth-lightwallet/index';
 import React, { Component } from 'react';
 import {
   AppRegistry,
