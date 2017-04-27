@@ -3,16 +3,23 @@ import {
   View,
   TouchableHighlight,
   Text,
-}
+} from 'react-native'
+import Promise from 'bluebird'
 
-export default class Wallet extends Component {
+export default class Eth extends Component {
   constructor() {
     super()
-    // instantiate block number cron
+    this.state = {
+      block_num: 0,
+    }
+    this.cron()
   }
 
   cron() {
-
+    /**
+     * Recursive promise chain that querys infura enpoint for latest block number
+     */
+    // return Promise.delay()
   }
 
   getBlockNumber() {
@@ -22,15 +29,8 @@ export default class Wallet extends Component {
   render() {
     return (
       <View>
-        <TouchableHighlight>
-          <View style={{ height 100, width:100}}>
-
-          </View>
-
-        </TouchableHighlight>
-        <Text>Block #: {this.state.blockNumber}</Text>
+        <Text style={{ fontSize: 100}}>Block #: {this.state.block_num}</Text>
       </View>
     )
   }
-
 }

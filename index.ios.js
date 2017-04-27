@@ -6,7 +6,11 @@
 
  // console.log('Buffer', global.Buffer)
 import './global.js'
-import { keystore, txutils, signing } from 'eth-lightwallet/index';
+import { Eth } from './src/index'
+console.log('Eth', Eth)
+// import { keystore, txutils, signing } from 'eth-lightwallet/index';
+// console.log('keystore', keystore)
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -19,16 +23,7 @@ export default class react_native_ethify extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Eth />
       </View>
     );
   }
@@ -40,16 +35,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
